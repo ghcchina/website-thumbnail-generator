@@ -10,7 +10,7 @@ Follow Below tutorial:
 
 * run go server
 
-`go run server.go`
+`go run main/server.go`
 
 * browser to open http://localhost:3000
 
