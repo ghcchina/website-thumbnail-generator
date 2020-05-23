@@ -6,6 +6,7 @@ import (
 	"fmt"
 	"log"
 	"net/http"
+	"os"
 )
 
 func main() {
@@ -48,7 +49,7 @@ func thumbnailHandler(w http.ResponseWriter, r *http.Request) {
 
 	// Create a struct with the parameters needed to call the ScreenshotAPI.
 	apiRequest := screenshotAPIRequest{
-		Token:          "1GZSKM2CYLIWF7SW2WEFO9EVVJJXLVLQ",
+		Token:          os.Getenv("SCREENSHOT_API_TOKEN"),
 		Url:            decoded.Url,
 		Output:         "json",
 		Width:          1920,
